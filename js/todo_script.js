@@ -1,38 +1,30 @@
 'use strict' // detected unstandard code
 $(document).ready(function(){  // check ready status for this file
-  console.log($(window))
+  //console.log($(window))
 
   var $input = $('.todo-input')
   var $content = $('.content')
   var btn = ".btn-add" // var
   var $btnadd = $(btn)// jquery var
-
   var $btnarc = $('.btn-arc')
 
-
   $btnadd.click(function(){
-    console.log('add')
+    //console.log('add')
     var temp = '<li>' + '<input type="checkbox" class="check"/>'+'<span class="task">'+ $input.val()+'</span>'+'<span class="delete">[x]</span>' +'</li>'
     $content.append(temp)
     //console.log($content,temp)
   })
 
   $('.content').on('click','.delete',function() {
-    console.log("del");
+    //console.log("del");
     $(this).parentNode().remove();
-    //console.log('delete');
-    //console.log($(this),$(this).parent())
-    //var x = document.getElementsByClassName('delete')
-    //$(this).closest('ul').remove()
-    //$(this).closest('ul').remove()
   })
 
   $btnarc.click(function(){
-    console.log('archieve')
-
+    //console.log('archieve')
     var boxes = document.getElementsByClassName('check')
     var texts = document.getElementsByClassName('task')
-    console.log(boxes.length)
+    //console.log(boxes.length)
       for(var i = 0; i<boxes.length; i++){
           var box = boxes[i]
           var txt = texts[i]
