@@ -6,22 +6,25 @@ $(document).ready(function(){  // check ready status for this file
   var $content = $('.content')
   var btn = ".btn-add" // var
   var $btnadd = $(btn)// jquery var
-  var $delete = $('.delete')
+
   var $btnarc = $('.btn-arc')
 
 
   $btnadd.click(function(){
     console.log('add')
-    var temp = '<ul>' + '<input type="checkbox" class="check"/>'+'<span class="task">'+ $input.val()+'</span>'+'<span class="delete">[x]</span>' +'</ul>'
+    var temp = '<li>' + '<input type="checkbox" class="check"/>'+'<span class="task">'+ $input.val()+'</span>'+'<span class="delete">[x]</span>' +'</li>'
     $content.append(temp)
     //console.log($content,temp)
   })
 
-  $delete.click (function() {
+  $('.content').on('click','.delete',function() {
+    console.log("del");
+    $(this).parentNode().remove();
     //console.log('delete');
-    console.log($(this),$(this).parent())
+    //console.log($(this),$(this).parent())
     //var x = document.getElementsByClassName('delete')
-    $(this).closest('ul').remove()
+    //$(this).closest('ul').remove()
+    //$(this).closest('ul').remove()
   })
 
   $btnarc.click(function(){
