@@ -10,12 +10,13 @@ $(document).ready(function(){  // check ready status for this file
 
   $btnadd.click(function(){
     //console.log('add')
-    var temp = '<li>' + '<input type="checkbox" class="check"/>'+'<span class="task">'+ $input.val()+'</span>'+'<span class="delete">[x]</span>' +'</li>'
+    var temp = '<li><input type="checkbox" class="check"/>'+'<span class="task">'+ $input.val()+'</span>'+'<button type="button" class="close" aria-label="Close">&times</button>' +'</li>'
     $content.append(temp)
-    //console.log($content,temp)
+    $input.val("")
+    //console.log(temp)
   })
 
-  $content.on('click','.delete',function() {
+  $content.on('click','.close',function() {
     //console.log("del");
     $(this).parent().remove()
   })
@@ -34,7 +35,9 @@ $(document).ready(function(){  // check ready status for this file
               i--
           }
       }
-  })
+    })
+
+
 /*
   $input.change(function(){
     console.log($(this).val())
