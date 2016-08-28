@@ -1,14 +1,24 @@
 
+body {
+    background-image: url("../image/books3.jpg");
+}
+
 img.pic {
   width: 100px;
   height: 100px;
   display: block;
   margin: auto;
+
 }
 
 div.header {
   padding: 10px;
   text-align: center;
+  color: white;
+}
+
+small {
+  color: #ffcccc;
 }
 
 div.input {
@@ -20,6 +30,7 @@ div.mid {
   max-width: 400px;
   margin: auto;
   clear: left;
+  color: white;
 }
 
 div.footer {
