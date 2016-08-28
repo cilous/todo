@@ -15,9 +15,9 @@ $(document).ready(function(){  // check ready status for this file
     //console.log($content,temp)
   })
 
-  $('.content').on('click','.delete',function() {
+  $content.on('click','.delete',function() {
     //console.log("del");
-    $(this).parentNode().remove();
+    $(this).parent().remove()
   })
 
   $btnarc.click(function(){
