@@ -8,6 +8,13 @@ $(document).ready(function(){  // check ready status for this file
   var $btnadd = $(btn)// jquery var
   var $btnarc = $('.btn-arc')
 
+  $input.keypress(function (e) {
+    if (e.which == 13)
+    {
+      $btnadd.click()
+    }
+  })
+
   $btnadd.click(function(){
     //console.log('add')
     var temp = '<li><input type="checkbox" class="check"/>'+'<span class="task">'+ $input.val()+'</span>'+'<button type="button" class="close" aria-label="Close">&times</button>' +'</li>'
